@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;   
+}
+
+body {
+    background-color: aliceblue;
+    text-align: center; /*alinha o texto centralizado*/
+    
+}
+
+header {
+    padding: 22px 0;
+    margin-top: 200px;
+    font-size: 20px;
+    
+}
+
+form input {
+    font-size: 18px;   
+    background-color: aliceblue;
+    border: solid#000;
+    padding: 8px;
+    width: 400px;
+}
+
+form button {
+    background-color: antiquewhite;
+    color: #000;
+    font-size: 18px;
+    font-weight: 24px;
+    border: solid#000;
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 50px;
+}
+
+li{
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.concluida {
+    text-decoration: line-through;
+}

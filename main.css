@@ -5,10 +5,26 @@
     font-family: 'Roboto', sans-serif;   
 }
 
-body {
+html, body {
+    width: 100%;
+    height: 100%; /* Isso deve garantir que a cor de fundo cubra a altura total da página */
+    min-height: 100vh; /* Isso garante que o corpo tem pelo menos a altura da janela de visualização */
     background-color: aliceblue;
     text-align: center; /*alinha o texto centralizado*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
     
+}
+
+#btnExportarImagem {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
 }
 
 header {
@@ -41,8 +57,27 @@ li{
     font-size: 18px;
     margin-top: 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .concluida {
     text-decoration: line-through;
+}
+
+.timestamp {
+    margin-left: 80px; /* Adiciona espaço à esquerda do horário */
+    font-style: italic; /* Opção para estilizar o horário (opcional) */
+    color: #666; /* Cor mais suave para o horário (opcional) */
+    white-space: nowrap; /* Evita que o horário quebre em várias linhas */
+
+}
+
+
+ul{
+    max-width: 550px; /* Define uma largura máxima para a lista */
+    margin: 0 auto; /* Centraliza a lista na página */
+    padding-left: 20px; /* Adiciona um pouco de espaço interno à esquerda */
+    padding-right: 20px; 
 }

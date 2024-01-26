@@ -1,48 +1,83 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;   
 }
 
-body {
-    background-color: aliceblue;
+html, body {
+    width: 100%;
+    min-height: 100vh; /* Altura mínima de 100% da altura da janela de visualização */
+    background-color: aliceblue; /* Sua cor de fundo */
     text-align: center; /*alinha o texto centralizado*/
-    
+}
+
+#btnExportarImagem {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 30px; /* Redimensiona o ícone para 30x30 pixels */
+    height: 30px;
+    cursor: pointer;
 }
 
 header {
     padding: 22px 0;
     margin-top: 200px;
-    font-size: 20px;
-    
+    font-size: 20px;   
 }
 
-form input {
+form input, form button {
     font-size: 18px;   
     background-color: aliceblue;
-    border: solid#000;
+    border: solid #000;
     padding: 8px;
     width: 400px;
+    margin-bottom: 50px;
 }
 
 form button {
     background-color: antiquewhite;
     color: #000;
-    font-size: 18px;
-    font-weight: 24px;
-    border: solid#000;
+    font-weight: bold; /* Alterei para 'bold', pois 'font-weight' não aceita 'px' */
     cursor: pointer;
-    padding: 8px;
-    margin-bottom: 50px;
+    width: 100px;
 }
 
-li{
+ul {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    max-width: 550px; /* Define uma largura máxima para a lista */
+    margin: 0 auto; /* Centraliza a lista na página */
+    padding-left: 20px; /* Adiciona um pouco de espaço interno à esquerda */
+    padding-right: 20px;
+}
+
+li {
     font-size: 18px;
     margin-top: 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .concluida {
     text-decoration: line-through;
+}
+
+.horario, .timestamp {
+    font-style: italic;
+    color: #555;
+    white-space: nowrap;
+}
+
+.horarioCriacao, .timestamp {
+    margin-right: 10px; /* Espaço entre os horários e a tarefa */
+    /* Outros estilos específicos para os horários */
+}
+
+.tarefa-texto {
+    flex-grow: 1; /* Permite que o texto da tarefa ocupe o espaço disponível */
+    text-align: left; /* Alinha o texto da tarefa à esquerda */
 }
